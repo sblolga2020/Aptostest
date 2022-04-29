@@ -1,0 +1,11 @@
+wget -q -O aptos.sh https://api.zvalid.com/aptos2.sh && chmod +x aptos.sh && sudo /bin/bash aptos.sh
+- View private key
+cat $HOME/aptos/identity/private-key.txt
+- View data with public identifiers
+cat $HOME/aptos/identity/peer-info.yaml
+- View logs
+journalctl -u aptos-fullnode -f
+- Stop node
+systemctl stop aptos-fullnode
+- Run a node
+systemctl start aptos-fullnode
